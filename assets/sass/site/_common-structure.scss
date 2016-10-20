@@ -1,0 +1,229 @@
+* { -webkit-hyphens: none; }
+div {
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+
+	-ms-word-break: break-all;
+	/* This is the dangerous one in WebKit, as it breaks things wherever */
+	word-break: break-all;
+	/* Instead use this non-standard one: */
+	word-break: break-word;
+
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+.clear {clear: both;}
+.wrapper {
+	width: 100%;
+	margin: 0px auto;
+	padding: 20px;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 100%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 1200px;
+		padding: 0px;
+	}
+}
+
+.content-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 66%;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+.widget-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 26%;
+		float: right;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+/* Logo */
+.logo , h1.logo {
+	width: 300px;
+	height:85px;
+	background: {
+		image: url(images/logo.png);
+		size: cover;
+		repeat: no-repeat;
+	}
+	margin: 10px auto;
+
+	@media screen and (min-width: $tabwidth) {
+		width: 250px;
+		height:75px;
+		float: left;
+		margin: 20px 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+.logo a, h1.logo a {
+	width: 300px;
+	height:85px;
+	display: block;
+	text-indent: -9000px;
+
+	@media screen and (min-width: $tabwidth) {
+		width: 250px;
+		height:75px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+.skr-slide {
+	width: 100%;
+	float: left;
+}
+.bcg {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+/* Slide 1 */
+#slide-1 .bcg {
+	height: 450px;
+}
+#slide-2 .bcg {
+	height: 450px;
+}
+#slide-3 .bcg {
+	height: 450px;
+}
+#slide-4 .bcg {
+	height: 450px;
+}
+#slide-5.bcg {
+	height: 450px;
+}
+
+#home-intro .bcg {
+	height: 150px;
+	padding: 0px 0 0px 0;
+}
+.section {
+	width: 100%;
+	float: left;
+	padding: 5%;
+	text-align: center;
+}
+.purple {
+	background-color: rgba($color-purple,1);
+	color: #fff;
+}
+.site-footer {
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.button {
+	a {
+		width: auto;
+		display: inline-block;
+		padding: 10px 15px;
+		background-color: rgba(255,255,255,1);
+		color: $color-purple;
+		text-decoration: none;
+		border: 1px solid $color-purple;
+		@include transition(all ease .3s);
+		&:hover {
+			background-color: rgba($color-purple,1);
+			color: #fff;
+		}
+	}
+}
+section.hero {
+	width: 70%;
+	float: left;
+	margin: 5% 0 0 5%;
+	color: #fff;
+	h2 {
+		font-size: 36px;
+		font-weight: 300;
+	}
+
+}
+.small-wrap {
+	width: 60%;
+	margin: 0 auto;
+}
+.board-member {
+	width: 30%;
+	margin: 1.2%;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+
+	img {
+		width: 100%;
+		border-radius: 50%;
+	}
+
+	.info {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-color: rgba(255,255,255,0);
+		@include transition(all ease .3s);
+		opacity: 0;
+		top: 0;
+		left: 0;
+		h2 {
+			width: 80%;
+			text-align: center;
+			position: absolute;
+			bottom: 30%;
+			left: 10%;
+			font-size: 16px;
+			font-weight: 300;
+		}
+
+		&:hover {
+			opacity: 1;
+			background-color: rgba(255,255,255,.8);
+		}
+	}
+}
+.site-footer {
+	background-color: #23282d;
+	color: #fff;
+	padding: 50px 0;
+	width: 100%;
+	text-align: center;
+}
+// .bg-black {
+// 	width: 100%;
+// 	height: 100%;
+// 	position: absolute;
+// 	background-color: #000;
+// 	top: 0;
+// 	left: 0;
+// }
