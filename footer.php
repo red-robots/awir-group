@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrapper">
 			<div class="site-info">
-				&copy; <?php echo date('Y'); ?>
+				&copy; <?php echo date('Y') . ' ' . get_bloginfo('description'); ?> | New York, NY 
 			</div><!-- .site-info -->
 	</div><!-- wrapper -->
 	</footer><!-- #colophon -->

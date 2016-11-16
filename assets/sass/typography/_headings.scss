@@ -5,3 +5,14 @@ h1, h2, h3, h4, h5, h6 {
 .entry-content h1 {
 	font-size: 30px;
 }
+header.page-title {
+	width: 100%;
+	float: left;
+	text-align: center;
+	margin: 40px 0;
+	h1 {
+		font: {
+			size: 30px;
+		}
+	}
+}
