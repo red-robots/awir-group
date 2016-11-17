@@ -36,11 +36,18 @@ get_header(); ?>
 							    	<h3>AWIR - Chair of Clinical Trials</h3>
 								</div>
 								<div class="right">
+
 									<?php echo do_shortcode('[gravityform id="' . $form['id'] . '" title="false" description="false" ajax="true"]'); ?>
 								</div>
 							</div>
 						</div><!-- .entry-content -->
 					</section>
+				</article><!-- #post-## -->
+
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<div class="entry-content">
+						<?php echo $description; ?>
+					</div><!-- .entry-content -->
 				</article><!-- #post-## -->
 
 				<?php if( have_rows('trails') ):  ?>
