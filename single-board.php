@@ -80,7 +80,7 @@ get_header(); ?>
 	  
 	    ?>
 
-	    <div class="boardmember <?php echo $postClass; ?>">
+	    <div class="boardmember <?php echo $postClass; ?> js-blocks">
 	    	<div class="member-photo">
 	    		<?php echo wp_get_attachment_image( $photo, $size ); ?>
 	    	</div>

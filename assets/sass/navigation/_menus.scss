@@ -3,7 +3,7 @@
 	display: block;
 	float: right;
 	width: auto;
-	margin: 70px 0 0 0;
+	margin: 50px 0 0 0;
 
 	ul {
 		display: none;
@@ -15,9 +15,10 @@
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
-			top: 1.5em;
+			top: 4em;
 			left: -999em;
 			z-index: 99999;
+			background-color: #fff;
 
 			ul {
 				left: -999em;
@@ -25,6 +26,8 @@
 			}
 
 			li {
+				line-height: 2;
+				margin: 0;
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
@@ -33,10 +36,13 @@
 
 			a {
 				width: 200px;
+				padding: 5px 10px;
+				@include transition(all ease .3s);
 			}
 
 			:hover > a,
 			.focus > a {
+				background-color: rgba($color-purple, 0.2);
 			}
 
 			a:hover,
@@ -54,6 +60,7 @@
 		position: relative;
 		margin: 0 0 0 20px ;
 		text-transform: uppercase;
+		line-height: 4;
 
 		&:hover > a,
 		&.focus > a {
