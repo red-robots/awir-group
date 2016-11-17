@@ -11,7 +11,7 @@ get_header(); ?>
 	</header>
 
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
 
 			<?php
@@ -40,7 +40,7 @@ get_header(); ?>
 			?>
 
 			<div class="newsletter-link <?php echo $postClass; ?>">
-				<a href="" target="_blank">
+				<a href="<?php echo $link; ?>" target="_blank">
 					<?php the_title(); ?>
 				</a>
 			</div>
@@ -55,7 +55,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<div class="widget-area">
+	<!-- <div class="widget-area">
 		<h2>Archives</h2>
 		<?php $args = array(
 			'type'            => 'monthly',
@@ -68,8 +68,8 @@ get_header(); ?>
 			'order'           => 'DESC',
 		        'post_type'     => 'newsletter'
 		);
-		wp_get_archives( $args ); ?>
-	</div>
+		//wp_get_archives( $args ); ?>
+	</div> -->
 </div>
 <?php
 get_footer();

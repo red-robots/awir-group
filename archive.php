@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-
+<div class="wrapper">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -45,7 +45,22 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+	<div class="widget-area">
+		<h2>Archives</h2>
+		<?php $args = array(
+			'type'            => 'monthly',
+			'limit'           => '',
+			'format'          => 'html', 
+			'before'          => '',
+			'after'           => '',
+			'show_post_count' => false,
+			'echo'            => 1,
+			'order'           => 'DESC',
+		        'post_type'     => 'newsletter'
+		);
+		wp_get_archives( $args ); ?>
+	</div>
+</div>
 <?php
-get_sidebar();
+
 get_footer();
