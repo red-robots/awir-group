@@ -44,7 +44,7 @@ get_header(); ?>
 					</section>
 				</article><!-- #post-## -->
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<article id="post-<?php the_ID(); ?>"  class="center">
 					<div class="entry-content">
 						<?php echo $description; ?>
 					</div><!-- .entry-content -->

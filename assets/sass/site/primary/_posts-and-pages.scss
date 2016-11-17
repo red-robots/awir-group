@@ -207,6 +207,7 @@ section.small-width {
 section.advocacy {
 	width: 100%;
 	float: left;
+	margin: 50px 0;
 
 	.col-left {
 		width: 45%;
@@ -430,4 +431,36 @@ section.sponsors {
 		padding: 5%;
 	}
 	
+}
+section.pagelinks {
+	width: 100%;
+	float: left;
+	.link {
+		width: 100%;
+		float: left;
+		margin: 1.6%;
+		@media screen and (min-width: $tabwidth) {
+			width: 30%;
+		}
+		a {
+			display: block;
+			background-color: rgba($color-purple, .7);
+			color: #fff;
+			text-decoration: none;
+			border: 2px solid rgba($color-purple, 1);
+			text-align: center;
+			padding: 50px 0;
+			font-size: 20px;
+			@include transition(all .3s ease);
+			@media screen and (min-width: $tabwidth) {
+				font-size: 20px;
+			}
+			@media screen and (min-width: $deskwidth) {
+				font-size: 40px;
+			}
+			&:hover {
+				background-color: rgba($color-purple, 1);
+			}
+		}
+	}
 }

@@ -38,7 +38,7 @@ get_header(); ?>
 		            </div>
 		            <section class="hero">
 		            	<h2>Association of Women in Rheumatology</h2>
-					    <div class="button">
+					    <div class="button-home">
 					    	<a href="#">Learn More About Us</a>
 					    </div>
 					</section>
@@ -96,7 +96,7 @@ get_header(); ?>
 				    	</div>
 				    </div>
 
-				    <div class="button">
+				    <div class="button-home">
 					    	<a href="#">View All</a>
 					    </div>
 			</div>

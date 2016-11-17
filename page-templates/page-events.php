@@ -86,6 +86,10 @@ get_header(); ?>
 			</div>
 
 			<?php 
+			else: 
+
+				echo '<div  class="grey center"><h2>There are no upcoming events.</h2></div>';
+				break;
 			// end if upcoming
 			endif;
 
