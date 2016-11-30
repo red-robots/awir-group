@@ -21,12 +21,28 @@ jQuery(document).ready(function ($) {
 	// Paralax
 	skrollr.init({
     	forceHeight: false,
+    	// smoothScrolling:true,
+    	// smoothScrollingDuration:1000,
 		 mobileCheck: function() {
                 //hack - forces mobile version to be off
                 return false;
             }
 		
 	});
+
+	// $(function() {
+	// 	var wrap = $("#mynav");
+
+	// 	wrap.on("scroll", function(e) {
+		    
+	// 	  if (this.scrollTop > 147) {
+	// 	    wrap.addClass("fix-search");
+	// 	  } else {
+	// 	    wrap.removeClass("fix-search");
+	// 	  }
+		  
+	// 	});
+	// });
 
 	/*
 	*
@@ -93,9 +109,9 @@ jQuery(document).ready(function ($) {
 	*	Nice Page Scroll
 	*
 	------------------------------------*/
-	$(function(){	
-		$("html").niceScroll();
-	});
+	// $(function(){	
+	// 	$("html").niceScroll();
+	// });
 	
 	
 	/*

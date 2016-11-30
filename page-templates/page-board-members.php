@@ -3,14 +3,15 @@
  * Template Name: Board Members
  */
 
-get_header(); ?>
+get_header();
+
+get_template_part('template-parts/title');
+
+ ?>
 
 	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
 
-		<header class="page-title">
-			<h1><?php the_title(); ?></h1>
-		</header>
 
 			<?php
 			$i=0;
@@ -37,7 +38,7 @@ get_header(); ?>
 
 			    ?>
 
-			    <div class="boardmember <?php echo $postClass; ?> js-blocks">
+			    <div class="boardmember <?php echo $postClass; ?> js-blocks wow fadeInUp">
 			    	<div class="member-photo">
 			    		<?php echo wp_get_attachment_image( $photo, $size ); ?>
 			    	</div>

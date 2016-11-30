@@ -191,6 +191,7 @@ gulp.task('styles', function () {
 gulp.task( 'vendorsJs', function() {
 	//gulp.src( jsVendorSRC )
 	gulp.src( [
+		'./assets/js/vendors/wow.js',
 		'./assets/js/vendors/skrolr.js',
 		'./assets/js/vendors/flexslider.js',
 		'./assets/js/vendors/blocks.js',
@@ -198,7 +199,7 @@ gulp.task( 'vendorsJs', function() {
 		'./assets/js/vendors/isotope.js',
 		'./assets/js/vendors/images-loaded.js',
 		'./assets/js/vendors/navigation.js',
-		'./assets/js/vendors/wow.js'
+		
 		] )
 		.pipe( concat( jsVendorFile + '.js' ) )
 		.pipe( gulp.dest( jsVendorDestination ) )

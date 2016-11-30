@@ -3,11 +3,13 @@
  * Template Name: Resources
  */
 
-get_header(); ?>
+get_header(); 
+
+get_template_part('template-parts/title');
+
+?>
 <div class="wrapper">
-	<header class="page-title">
-		<h1><?php the_title(); ?></h1>
-	</header>
+
 
 	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
@@ -25,13 +27,13 @@ get_header(); ?>
 				</article><!-- #post-## -->
 
 				<section class="pagelinks">
-					<div class="link">
+					<div class="link  wow fadeInUp">
 						<a href="<?php bloginfo('url'); ?>/advocacy">Advocacy</a>
 					</div>
-					<div class="link">
+					<div class="link  wow fadeInUp">
 						<a href="<?php bloginfo('url'); ?>/education">Education</a>
 					</div>
-					<div class="link">
+					<div class="link  wow fadeInUp">
 						<a href="<?php bloginfo('url'); ?>/clinical-trials">Clinical Trials</a>
 					</div>
 				</section>

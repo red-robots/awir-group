@@ -14,6 +14,11 @@ div {
 	float: left;
 	background-color: #F5F5F5;
 	min-height: 700px;
+	margin-top: 80px;
+}
+#primary {
+	// width: 100%;
+	float: left;
 }
 .wrapper {
 	width: 100%;
@@ -36,10 +41,21 @@ div {
 	@media screen and (min-width: $tabwidth) {
 		width: 66%;
 		float: left;
-		margin: 0;
+		margin: 50px 0 0 0;
 	}
 	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
+	}
+}
+.content-area-full {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		float: left;
+		margin: 50px 0 0 0;
+	}
+	@media screen and (min-width: $deskwidth) {
 	}
 }
 
@@ -51,7 +67,7 @@ div {
 	@media screen and (min-width: $tabwidth) {
 		width: 26%;
 		float: right;
-		margin: 0;
+		margin: 50px 0 0 0;
 	}
 	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
@@ -93,11 +109,40 @@ div {
 		/*width: 1200px;*/
 	}
 }
+.skrollable-after {
+	.logo {
+		width: 200px;
+			height:64px;
+		@media screen and (min-width: $tabwidth) {
+			width: 200px;
+			height:64px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			
+		}
+	}
+	.logo a {
+		width: 200px;
+			height:64px;
+		@media screen and (min-width: $tabwidth) {
+			width: 200px;
+			height:64px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			
+		}
+	}
+}
+.skrollable-between, .skrollable-after {
+	.logo, .logo a {
+		@include transition(all ease .3s);
+	}
+}
 .skr-slide {
 	width: 100%;
 	float: left;
 }
-.bcg {
+.bcg, .bcg-page, .bcg-page-secondary {
     background-position: top center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -106,6 +151,7 @@ div {
     width: 100%;
     position: relative;
 }
+
 /* Slide 1 */
 #slide-1 .bcg {
 	height: 450px;
@@ -119,10 +165,33 @@ div {
 #slide-4 .bcg {
 	height: 450px;
 }
-#slide-5.bcg {
+#slide-5 .bcg {
 	height: 450px;
 }
+#slide-page .bcg-page {
+	height: 350px;
+	
+}
+#slide-page-secondary .bcg-page {
+	height: 300px;
+}
+.skrollable-between.bcg-page, .skrollable-after.bcg-page {
+	
+		@include transition(all ease .3s);
+	
+}
+.skrollable-between.bcg-page {
+	height: 350px;
+		// filter: sepia(100%);
+  //  -webkit-filter: sepia(100%);
 
+}
+.skrollable-after.bcg-page {
+	height:150px;
+		// filter: sepia(100%);
+  //  -webkit-filter: sepia(100%);
+	
+}
 #home-intro .bcg {
 	height: 150px;
 	padding: 0px 0 0px 0;
@@ -187,6 +256,17 @@ section.hero {
 	}
 
 }
+section.page-hero {
+	width: 100%;
+	float: left;
+	margin: 5% 0 0 0%;
+	color: #fff;
+	h2 {
+		font-size: 36px;
+		font-weight: 300;
+	}
+
+}
 .small-wrap {
 	width: 60%;
 	margin: 0 auto;
@@ -240,11 +320,46 @@ article.hentry {
 	width: 100%;
 	float: left;
 }
+article.content-section-page {
+	margin: 30px auto;
+	padding: 20px 0;
+}
 .grey {
 	color: #999;
 }
 .center {
 	text-align: center;
+}
+.white-bg {
+	background-color: #fff;
+	width: 100%;
+	float: left;
+}
+section.subnav {
+	width: 100%;
+	// background-color: #333;
+	color: #fff;
+	float: left;
+	// border-top: 2px solid #fff;
+	// border-bottom: 2px solid #fff;
+	text-align: center;
+	li {
+		width: auto;
+		display: inline-block;
+	}
+	a {
+		width: auto;
+		display: block;
+		padding:  10px 25px  10px 25px;
+		text-decoration: none;
+		background-color: rgba($color-purple,.8);
+		@include transition(all ease .3s);
+		color: #fff;
+		&:hover {
+			background-color: rgba($color-purple,1);
+		
+		}
+	}
 }
 // .bg-black {
 // 	width: 100%;

@@ -3,11 +3,13 @@
  * Template Name: Exhibitors
  */
 
-get_header(); ?>
+get_header(); 
+
+get_template_part('template-parts/title');
+
+?>
 <div class="wrapper">
-	<header class="page-title">
-		<h1><?php the_title(); ?></h1>
-	</header>
+
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

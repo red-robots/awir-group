@@ -28,6 +28,8 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
+	
+		<div id="mynav"  data-anchor-target="#content" data-200-top="opacity:1;" data-150-top="visibility:visible; position: fixed; opacity: 1;" data-100-top="opacity: 1; position: fixed; top: 0;">
 		<div class="wrapper">
 			
 			<?php if(is_home()) { ?>
@@ -45,6 +47,8 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
 	</div><!-- wrapper -->
+	</div>
+	
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content ">

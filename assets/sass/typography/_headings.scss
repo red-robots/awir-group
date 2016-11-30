@@ -12,7 +12,25 @@ header.page-title {
 	margin: 40px 0;
 	h1 {
 		font: {
-			size: 30px;
+			size: 40px;
 		}
 	}
+}
+
+.skrollable-before header.page-title h1, .skrollable-between header.page-title h1, .skrollable-after header.page-title h1 {
+	
+		@include transition(all ease .3s);
+	
+}
+.skrollable-before header.page-title h1{
+	font-size: 50px;
+
+}
+.skrollable-between header.page-title h1{
+	// font-size: 45px;
+	
+}
+.skrollable-after header.page-title h1{
+	// font-size: 40px;
+	
 }

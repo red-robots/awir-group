@@ -32,7 +32,7 @@ get_header(); ?>
 
 		?>
 
-			<div class="single-board">
+			<div class="single-board ">
 				<div class="left">
 					<div class="member-photo">
 			    		<?php echo wp_get_attachment_image( $photo, $size ); ?>
@@ -80,7 +80,7 @@ get_header(); ?>
 	  
 	    ?>
 
-	    <div class="boardmember <?php echo $postClass; ?> js-blocks">
+	    <div class="boardmember <?php echo $postClass; ?> js-blocks  wow fadeInUp">
 	    	<div class="member-photo">
 	    		<?php echo wp_get_attachment_image( $photo, $size ); ?>
 	    	</div>

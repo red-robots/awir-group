@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Advocacy
+ * Template Name: Advocacy Links
  */
 
 get_header(); 
