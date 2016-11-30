@@ -52,22 +52,7 @@ get_template_part('template-parts/subnav-resources');
 				</article><!-- #post-## -->
 </div>
 
-<section id="slide-1" class="skr-slide">
-		    <div class="bcg "
-		     style="background-image:url(<?php bloginfo('template_url'); ?>/images/image1.jpg);"
-		        data-center="background-position: 50% 0px;"
-		        data-top-bottom="background-position: 50% -100px;"
-		        data-anchor-target="#slide-1">
-		        <div class="hsContainer">
-		            <div class="hsContent"
-		                data-center="opacity: 1"
-		                data-106-top="opacity: 0"
-		                data-anchor-target="#slide-1">
-		               
-		            </div>
-		        </div>
-		    </div>
-		</section>
+
 
 
 				<article id="post-<?php the_ID(); ?>"  class="content-section-page white-bg center ">
@@ -78,22 +63,7 @@ get_template_part('template-parts/subnav-resources');
 					</div>
 				</article><!-- #post-## -->
 
-<section id="slide-1" class="skr-slide">
-		    <div class="bcg "
-		     style="background-image:url(<?php bloginfo('template_url'); ?>/images/image1.jpg);"
-		        data-center="background-position: 50% 0px;"
-		        data-top-bottom="background-position: 50% -100px;"
-		        data-anchor-target="#slide-1">
-		        <div class="hsContainer">
-		            <div class="hsContent"
-		                data-center="opacity: 1"
-		                data-106-top="opacity: 0"
-		                data-anchor-target="#slide-1">
-		               
-		            </div>
-		        </div>
-		    </div>
-		</section>
+
 		
 				
 				<section class="advocacy">
@@ -106,7 +76,7 @@ get_template_part('template-parts/subnav-resources');
 								$email = get_sub_field('email');
 								$spambot = antispambot($email);
 							?>
-								<div class="ad-link ">
+								<div class="ad-link  wow fadeInUp">
 									<div class="name"><?php echo $name; ?></div>
 									<div class="title"><?php echo $title; ?></div>
 									<a class="email" href="<?php echo $spambot; ?>"><?php echo $spambot; ?></a>
@@ -124,7 +94,7 @@ get_template_part('template-parts/subnav-resources');
 							$email = get_sub_field('email');
 							$spambot = antispambot($email);
 						?>
-							<div class="ad-link ">
+							<div class="ad-link wow fadeInUp">
 								<div class="name"><?php echo $name; ?></div>
 								<div class="title"><?php echo $title; ?></div>
 								<a class="email" href="<?php echo $spambot; ?>"><?php echo $spambot; ?></a>

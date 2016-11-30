@@ -207,7 +207,12 @@ section.small-width {
 section.advocacy {
 	width: 100%;
 	float: left;
-	margin: 50px 0;
+	margin: 50px auto;
+	@media screen and (min-width: $tabwidth) {
+		width: 70%;
+		float: none;
+		clear: both;
+	}	
 
 	.col-left {
 		width: 45%;
@@ -222,6 +227,10 @@ section.advocacy {
 		float: left;
 		border-bottom: 1px solid #ccc;
 		padding: 5px 0 10px 0;
+		text-align: center;
+		background-color: #fff;
+		margin-bottom: 5px;
+		
 	}
 	.name {
 		font-size: 14px;
@@ -249,6 +258,47 @@ section.advocacy {
 		@media screen and (min-width: $deskwidth) {
 			font-size: 14px;
 		}
+	}
+}
+.adv-link-but {
+	width: auto;
+	text-align: center;
+	display: inline-block;
+
+	a {
+		background-color: rgba($color-purple, .8);
+		border: 1px solid rgba($color-purple, 1);
+		@include transition(all ease .3s);
+		display: block;
+		padding: 20px 30px ;
+		color: #fff;
+		text-decoration: none;
+		font-size: 28px;
+		border-radius: 5px;
+
+		&:hover {
+			background-color: rgba($color-purple, 1);
+		}
+	}
+}
+section.adv-resources {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 50px 0;
+	clear: both;
+
+	a {
+		text-decoration: none;
+		color: #333;
+	}
+
+	h3 {
+		margin: 20px 0;
+	}
+
+	@media screen and (min-width: $deskwidth) {
+		width: 70%;
 	}
 }
 section.education {
@@ -463,4 +513,88 @@ section.pagelinks {
 			}
 		}
 	}
+}
+.local-event {
+	width: 28%;
+	margin: 2%;
+	padding: 2%;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	float: left;
+	text-align: left;
+
+	h3 {
+		width: 100%;
+		float: left;
+		margin: 0 0 5px 0;
+		font-size: 20px;
+	}
+	.event-contents {
+		width: 100%;
+		float: left;
+	}
+	.event-date {
+
+	}
+	.event-address {
+
+	}
+	.event-phone {
+
+	}
+	.event-details {
+		font-size: 14px;
+		width: 100%;
+		float: left;
+		margin: 5px 0
+
+	}
+	.event-reg {
+		width: 100%;
+		display: inline-block;
+		a {
+			display: block;
+			background-color: rgba($color-purple, .7);
+			color: #fff;
+			text-decoration: none;
+			border: 2px solid rgba($color-purple, 1);
+			text-align: center;
+			padding: 5px 15px;
+			font-size: 20px;
+			@include transition(all .3s ease);
+			&:hover {
+				background-color: rgba($color-purple, 1);
+			}
+		}
+	}
+}
+.leader {
+	text-align: center;
+	h3 {
+		font-size: 18px;
+		padding: 5px 0;
+		border-bottom: 1px solid #ccc;
+	}
+	h4 {
+		font-size: 16px;
+	}
+	.contact {
+		width: 100%;
+		float: left;
+		a {
+			display: block;
+			background-color: rgba($color-purple, .7);
+			color: #fff !important;
+			text-decoration: none;
+			border: 2px solid rgba($color-purple, 1);
+			text-align: center;
+			padding: 5px 15px;
+			font-size: 20px;
+			@include transition(all .3s ease);
+			&:hover {
+				background-color: rgba($color-purple, 1);
+			}
+		}
+	}
+	
 }

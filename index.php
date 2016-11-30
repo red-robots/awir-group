@@ -120,6 +120,25 @@ get_header(); ?>
 		</section>
 
 		
+		<section id="slide" class="skr-slide section">
+			<div class="small-wrap">
+			<h2>Partner Organizations</h2>
+				<div class="flexslider">
+			        <ul class="slides">
+			        <?php //while ( $the_query->have_posts() ) : ?>
+						<?php //$the_query->the_post(); ?>
+			            
+			            <li> 
+			              
+			                   <img src="<?php //the_field('banner_image'); ?>" />
+			                
+			            </li>
+			            
+			           <?php //endwhile; ?>
+			      	 </ul><!-- slides -->
+			</div><!-- .flexslider -->
+			</div>
+		</section>
 
 
 		<section id="slide-4" class="skr-slide">

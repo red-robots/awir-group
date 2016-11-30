@@ -1,13 +1,13 @@
 <?php
 /**
- * Template Name: Advocacy
+ * Template Name: Local Chapters
  */
 
 get_header(); 
 
 get_template_part('template-parts/title');
 
-get_template_part('template-parts/subnav-resources');
+// get_template_part('template-parts/subnav-resources');
 
 ?>
 
@@ -76,32 +76,39 @@ get_template_part('template-parts/subnav-resources');
 					<div class="entry-content">
 						<?php echo $description; ?>
 					</div><!-- .entry-content -->
-
-					<div class="adv-link-but">
-						<a href="<?php echo $advocacy_link; ?>"><?php echo $advocacy_links_text; ?></a>
-					</div>
-
-					</div>
+				</div>
 				</article><!-- #post-## -->
 
 		
 
 		<section class="adv-resources">
-			<h2><?php the_field('section_title'); ?></h2>
-			<?php if( have_rows('information_resources') ):  ?>
+			<h2>Local Chapter Events</h2>
+			<?php if( have_rows('events') ):  ?>
 					<section class="education">
-					<?php while( have_rows('information_resources') ):  the_row();
+					<?php while( have_rows('events') ):  the_row();
 							$link_image = get_sub_field('link_image');
 							$size = 'full';
-							$link = get_sub_field('link_file_pdf');
-							$title = get_sub_field('title');
+							$event = get_sub_field('event');
+							$event_date = get_sub_field('event_date');
+							$address = get_sub_field('address');
+							$phone = get_sub_field('phone');
+							$email = get_sub_field('email');
+							$details = get_sub_field('details');
+							$antispam = antispambot( $email );
 					?>
 						
-							<div class="edu-link">
-								<a href="<?php echo $link; ?>">
-									<?php echo wp_get_attachment_image( $link_image, $size ); ?>
-									<h3><?php echo $title; ?></h3>
-								</a>
+							<div class="local-event wow fadeUpIn ">
+								<h3><?php echo $event; ?></h3>
+								<div class="event-contents js-blocks">
+									<?php if( $event_date != '') { echo '<div class="event-date">' . $event_date . '</div>'; } ?>
+									<?php if( $address != '') { echo '<div class="event-address">' . $address . '</div>'; } ?>
+									<?php if( $phone != '') { echo '<div class="event-phone">' . $phone . '</div>'; } ?>
+									<?php if( $details != '') { echo '<div class="event-details">' . $details . '</div>'; } ?>
+								</div>
+								<?php if( $email != '') { 
+									echo '<div class="event-reg"><a href="mailto:' . $antispam . '">Register</a></div>'; 
+									} ?>
+							
 							</div>
 						
 					<?php endwhile; ?>
@@ -109,6 +116,37 @@ get_template_part('template-parts/subnav-resources');
 				<?php endif; ?>
 		</section>
 		
+
+		<section class="adv-resources">
+			<h2>Local Chapter Leaders</h2>
+			<?php if( have_rows('leaders') ):  ?>
+					<section class="education">
+					<?php while( have_rows('leaders') ):  the_row();
+							$image = get_sub_field('image');
+							$size = 'full';
+							$chapter_name = get_sub_field('chapter_name');
+							$leader_name = get_sub_field('leader_name');
+							$leader_email = get_sub_field('leader_email');
+							$phone = get_sub_field('phone');
+							$antispam = antispambot($leader_email);
+					?>
+						
+							<div class="local-event leader wow fadeInUp">
+								<div class="event-contents js-blocks">
+									<?php echo wp_get_attachment_image( $image, $size ); ?>
+									<h3><?php echo $chapter_name; ?></h3>
+									<h4><?php echo $leader_name; ?></h4>
+								</div>
+								<div class="contact">
+									<a href="mailto:<?php echo $antispam; ?>">Contact</a>
+								</div>
+								
+							</div>
+						
+					<?php endwhile; ?>
+					</section>
+				<?php endif; ?>
+		</section>
 				
 				
 

@@ -1505,10 +1505,11 @@ section.other-members h3.sect-head{font-size:28px;text-align:center}
 section.small-width{width:90%;margin:0 auto}
 @media screen and (min-width:600px){section.small-width{width:80%}
 }@media screen and (min-width:1200px){section.small-width{width:60%}
-}section.advocacy{width:100%;float:left;margin:50px 0}
-section.advocacy .col-left{width:45%;float:left}
+}section.advocacy{width:100%;float:left;margin:50px auto}
+@media screen and (min-width:600px){section.advocacy{width:70%;float:none;clear:both}
+}section.advocacy .col-left{width:45%;float:left}
 section.advocacy .col-right{width:45%;float:right}
-section.advocacy .ad-link{width:100%;float:left;border-bottom:1px solid #ccc;padding:5px 0 10px 0}
+section.advocacy .ad-link{width:100%;float:left;border-bottom:1px solid #ccc;padding:5px 0 10px 0;text-align:center;background-color:#fff;margin-bottom:5px}
 section.advocacy .name{font-size:14px}
 @media screen and (min-width:600px){section.advocacy .name{font-size:16px}
 }@media screen and (min-width:1200px){section.advocacy .name{font-size:18px}
@@ -1518,6 +1519,13 @@ section.advocacy .name{font-size:14px}
 }section.advocacy a.email{font-size:10px}
 @media screen and (min-width:600px){section.advocacy a.email{font-size:12px}
 }@media screen and (min-width:1200px){section.advocacy a.email{font-size:14px}
+}.adv-link-but{width:auto;text-align:center;display:inline-block}
+.adv-link-but a{background-color:rgba(102,47,143,0.8);border:1px solid #662f8f;-webkit-transition:all ease .3s;transition:all ease .3s;display:block;padding:20px 30px;color:#fff;text-decoration:none;font-size:28px;border-radius:5px}
+.adv-link-but a:hover{background-color:#662f8f}
+section.adv-resources{width:100%;margin:0 auto;text-align:center;padding:50px 0;clear:both}
+section.adv-resources a{text-decoration:none;color:#333}
+section.adv-resources h3{margin:20px 0}
+@media screen and (min-width:1200px){section.adv-resources{width:70%}
 }section.education{width:100%;float:left}
 section.education .edu-link{width:90%;margin:20px auto;overflow:hidden;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:all ease .3s;transition:all ease .3s}
 section.education .edu-link img{width:100%}
@@ -1561,6 +1569,19 @@ section.pagelinks .link{width:100%;float:left;margin:1.6%}
 @media screen and (min-width:600px){section.pagelinks .link a{font-size:20px}
 }@media screen and (min-width:1200px){section.pagelinks .link a{font-size:40px}
 }section.pagelinks .link a:hover{background-color:#662f8f}
+.local-event{width:28%;margin:2%;padding:2%;background-color:#fff;border:1px solid #ccc;float:left;text-align:left}
+.local-event h3{width:100%;float:left;margin:0 0 5px 0;font-size:20px}
+.local-event .event-contents{width:100%;float:left}
+.local-event .event-details{font-size:14px;width:100%;float:left;margin:5px 0}
+.local-event .event-reg{width:100%;display:inline-block}
+.local-event .event-reg a{display:block;background-color:rgba(102,47,143,0.7);color:#fff;text-decoration:none;border:2px solid #662f8f;text-align:center;padding:5px 15px;font-size:20px;-webkit-transition:all .3s ease;transition:all .3s ease}
+.local-event .event-reg a:hover{background-color:#662f8f}
+.leader{text-align:center}
+.leader h3{font-size:18px;padding:5px 0;border-bottom:1px solid #ccc}
+.leader h4{font-size:16px}
+.leader .contact{width:100%;float:left}
+.leader .contact a{display:block;background-color:rgba(102,47,143,0.7);color:#fff !important;text-decoration:none;border:2px solid #662f8f;text-align:center;padding:5px 15px;font-size:20px;-webkit-transition:all .3s ease;transition:all .3s ease}
+.leader .contact a:hover{background-color:#662f8f}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
