@@ -29,13 +29,15 @@ get_template_part('template-parts/title');
 				'paged' => $paged,
 				'meta_key'	=> 'date',
 				'orderby'	=> 'meta_value_num',
-				'order'		=> 'ASC'
+				'order'		=> 'DESC'
 			));
 			if ($wp_query->have_posts()) : ?>
 			<section class="events">
 		    <?php while ($wp_query->have_posts()) : ?>
 		        
 		    <?php $wp_query->the_post();  $i++;
+
+		
 
 			$link = get_field('link');
 	    	$photo = get_field('featured_image');
@@ -53,13 +55,16 @@ get_template_part('template-parts/title');
 			$date = new DateTime($date);
 
 			$compareDate = $date->format('Ymd');
+			// echo '<pre>';
+			// print_r($compareDate);
+			// echo '</pre>';
 
 			$end_date = get_field('end_date', false, false);
 			// make date object
 			$end_date = new DateTime($end_date);
 
 			$today = date('Ymd');
-			//echo $today;
+			//echo $today . ' | ' . $end_date;
 
 			// Only upcoming Dates
 			if ( $compareDate >= $today ) :
@@ -67,31 +72,59 @@ get_template_part('template-parts/title');
 
 
 			<div class="event <?php echo $postClass; ?>">
-				<div class="event-photo"><?php echo wp_get_attachment_image( $photo, $size ); ?></div>
-				
-				<div class="content">
-					<h2><?php the_title(); ?></h2>
-					<div class="dates">
-						<?php 
-						if( $end_date != '' ) {
-							echo $date->format('M j') . ' - ' . $end_date->format('j, Y') ; 
-						} else {
-							echo $date->format('j M Y');
-						}
-						
 
-						?>
-					</div>
-				</div>
-				<div class="learnmore"><a href="<?php the_permalink(); ?>">Learn More</a></div>
+			<h2>National Conference <?php 
+								if( $end_date != '' ) {
+									echo $date->format('M j') . ' - ' . $end_date->format('j, Y') ; 
+								} else {
+									echo $date->format('j M Y');
+								}
+								?></h2>
+
+				<div class="event-left">
+					<div class="event-photo"><?php echo wp_get_attachment_image( $photo, $size ); ?></div>
+				
+						<div class="content">
+							<h2><?php the_title(); ?></h2>
+							<div class="dates">
+								<?php 
+								if( $end_date != '' ) {
+									echo $date->format('M j') . ' - ' . $end_date->format('j, Y') ; 
+								} else {
+									echo $date->format('j M Y');
+								}
+								?>
+							</div>
+						</div>
+						<div class="learnmore"><a href="<?php the_permalink(); ?>">Learn More</a></div>
+				</div><!-- event left -->
+				
+				<div class="event-right">
+					<?php 
+
+						$images = get_field('gallery');
+
+						if( $images ): ?>
+						   
+						        <?php foreach( $images as $image ): ?>
+						            <div class="gal-image">
+						                <a class="gallery" href="<?php echo $image['url']; ?>">
+						                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+						                </a>
+						            </div>
+						          
+						        <?php endforeach; ?>
+						    
+						<?php endif; ?>
+				</div><!-- event right -->
 				
 			</div>
 
 			<?php 
 			else: 
 
-				echo '<div  class="grey center"><h2>There are no upcoming events.</h2></div>';
-				break;
+				//echo '<div  class="grey center"><h2>There are no upcoming events.</h2></div>';
+				//break;
 			// end if upcoming
 			endif;
 
@@ -161,23 +194,51 @@ get_template_part('template-parts/title');
 
 
 			<div class="event <?php echo $postClass; ?>">
-				<div class="event-photo"><?php echo wp_get_attachment_image( $photo, $size ); ?></div>
-				
-				<div class="content">
-					<h2><?php the_title(); ?></h2>
-					<div class="dates">
-						<?php 
-						if( $end_date != '' ) {
-							echo $date->format('M j') . ' - ' . $end_date->format('j, Y') ; 
-						} else {
-							echo $date->format('j M Y');
-						}
-						
 
-						?>
-					</div>
-				</div>
-				<div class="learnmore"><a href="<?php the_permalink(); ?>">Learn More</a></div>
+			<h2>National Conference <?php 
+								if( $end_date != '' ) {
+									echo $date->format('M j') . ' - ' . $end_date->format('j, Y') ; 
+								} else {
+									echo $date->format('j M Y');
+								}
+								?></h2>
+
+				<div class="event-left">
+					<div class="event-photo"><?php echo wp_get_attachment_image( $photo, $size ); ?></div>
+				
+						<div class="content">
+							<h2><?php the_title(); ?></h2>
+							<div class="dates">
+								<?php 
+								if( $end_date != '' ) {
+									echo $date->format('M j') . ' - ' . $end_date->format('j, Y') ; 
+								} else {
+									echo $date->format('j M Y');
+								}
+								?>
+							</div>
+						</div>
+						<div class="learnmore"><a href="<?php the_permalink(); ?>">Learn More</a></div>
+				</div><!-- event left -->
+				
+				<div class="event-right">
+					<?php 
+
+						$images = get_field('gallery');
+
+						if( $images ): ?>
+						   
+						        <?php foreach( $images as $image ): ?>
+						            <div class="gal-image">
+						                <a class="gallery" href="<?php echo $image['url']; ?>">
+						                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+						                </a>
+						            </div>
+						          
+						        <?php endforeach; ?>
+						    
+						<?php endif; ?>
+				</div><!-- event right -->
 				
 			</div>
 

@@ -7,7 +7,7 @@ get_header();
 
 get_template_part('template-parts/title');
 
-// get_template_part('template-parts/subnav-resources');
+get_template_part('template-parts/subnav-resources');
 
 ?>
 

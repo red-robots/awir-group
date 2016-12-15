@@ -7,6 +7,8 @@ get_header();
 
 get_template_part('template-parts/title');
 
+get_template_part('template-parts/subnav-resources');
+
  ?>
 
 	<div id="primary" class="content-area-full">

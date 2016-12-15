@@ -7,12 +7,16 @@
  * @package ACStarter
  */
 
-get_header(); ?>
+get_header(); 
+
+get_template_part('template-parts/title');
+
+?>
 <div class="wrapper">
 
-	<header class="page-title">
+	<!-- <header class="page-title">
 		<h1><?php the_title(); ?></h1>
-	</header>
+	</header> -->
 
 	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
@@ -74,7 +78,7 @@ get_header(); ?>
 			</header>
 
 				<?php if(have_rows('platinum_sponsors')) : ?>
-					<div class="sponsor">
+					<div class="sponsor sponsor-event ">
 					<h3 class="platinum">Platinum</h3>
 					<div class="content">
 					<?php while(have_rows('platinum_sponsors')) : the_row(); 
@@ -90,7 +94,7 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<?php if(have_rows('gold_sponsors')) : ?>
-					<div class="sponsor">
+					<div class="sponsor sponsor-event ">
 					<h3 class="gold">Gold</h3>
 					<div class="content">
 					<?php while(have_rows('gold_sponsors')) : the_row(); 
@@ -106,7 +110,7 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<?php if(have_rows('silver_sponsors')) : ?>
-					<div class="sponsor">
+					<div class="sponsor sponsor-event ">
 					<h3 class="silver">Silver</h3>
 					<div class="content">
 					<?php while(have_rows('silver_sponsors')) : the_row(); 
@@ -122,7 +126,7 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<?php if(have_rows('bronze_sponsors')) : ?>
-					<div class="sponsor">
+					<div class="sponsor sponsor-event ">
 					<h3 class="bronze">Bronze</h3>
 					<div class="content">
 					<?php while(have_rows('bronze_sponsors')) : the_row(); 

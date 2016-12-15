@@ -34,7 +34,7 @@ get_header(); ?>
 		                data-center="opacity: .6;"
 		                data-106-top="opacity: 0;"
 		                data-anchor-target="#slide-2">
-		               jakljfjklknl;fjkldsfkl;fs
+		           
 		            </div>
 		            <section class="hero">
 		            	<h2>Association of Women in Rheumatology</h2>
@@ -120,25 +120,53 @@ get_header(); ?>
 		</section>
 
 		
+		<?php $the_query = new WP_Query();
+				$the_query->query(array(
+				'post_type'=>'partner',
+				'posts_per_page' => -1
+				));
+				if ( $the_query->have_posts() ) :
+			?>
 		<section id="slide" class="skr-slide section">
 			<div class="small-wrap">
 			<h2>Partner Organizations</h2>
 				<div class="flexslider">
 			        <ul class="slides">
-			        <?php //while ( $the_query->have_posts() ) : ?>
-						<?php //$the_query->the_post(); ?>
+			        <?php 
+
+			        	while ( $the_query->have_posts() ) : ?>
+						<?php $the_query->the_post(); 
+							
+							$image = get_field('partner_logo');
+							$link = get_field('link');
+
+							if( !empty($image) ): 
+
+								// vars
+								$url = $image['url'];
+								$title = $image['title'];
+								$alt = $image['alt'];
+
+								// thumbnail
+								$size = 'large';
+								$thumb = $image['sizes'][ $size ];
+								$width = $image['sizes'][ $size . '-width' ];
+								$height = $image['sizes'][ $size . '-height' ];
+							endif;
+	?>
 			            
 			            <li> 
-			              
-			                   <img src="<?php //the_field('banner_image'); ?>" />
-			                
+			            <?php if( !empty($link)) {echo '<a target="_blank" href="'. $link . '">';} ?>
+			              <img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
+			              <?php if( !empty($link)) { echo '</a>'; } ?>
 			            </li>
 			            
-			           <?php //endwhile; ?>
+			           <?php endwhile; ?>
 			      	 </ul><!-- slides -->
 			</div><!-- .flexslider -->
 			</div>
 		</section>
+		<?php endif; ?>
 
 
 		<section id="slide-4" class="skr-slide">

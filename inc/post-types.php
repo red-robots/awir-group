@@ -99,6 +99,37 @@ function js_custom_init()
 	
   ); 
   register_post_type('board',$args); // name used in query
+
+      $labels = array(
+  'name' => _x('Partner Organizations', 'post type general name'),
+    'singular_name' => _x('Partner', 'post type singular name'),
+    'add_new' => _x('Add New', 'BPartner'),
+    'add_new_item' => __('Add New Partner'),
+    'edit_item' => __('Edit Partner'),
+    'new_item' => __('New Partner'),
+    'view_item' => __('View Partner'),
+    'search_items' => __('Search Partner'),
+    'not_found' =>  __('No Partners found'),
+    'not_found_in_trash' => __('No Partners found in Trash'), 
+    'parent_item_colon' => '',
+    'menu_name' => 'Partner Organizations'
+  );
+  $args = array(
+  'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true, 
+    'show_in_menu' => true, 
+    'query_var' => true,
+    'rewrite' => true,
+    'capability_type' => 'post',
+    'has_archive' => false, 
+    'hierarchical' => false, // 'false' acts like posts 'true' acts like pages
+    'menu_position' => 20,
+    'supports' => array('title','editor','custom-fields','thumbnail'),
+  
+  ); 
+  register_post_type('partner',$args); // name used in query
   
   // Add more between here
   
