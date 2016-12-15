@@ -34,7 +34,7 @@ if ( is_page() && $post->post_parent ) :
 <?php endif; ?>
 
 
-?>
+
 <div class="wrapper">
 	<?php if( !has_post_thumbnail() ) { ?>
 		<header class="page-title">
