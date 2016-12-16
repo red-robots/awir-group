@@ -26,7 +26,7 @@ if( get_post_type() == 'event') {
 	    <div class="hsContainer">
 	        <div class="hsContent"
 	            data-center="opacity: 1;"
-	            data-106-top="opacity: .5;"
+	            data-106-top="opacity: .7;"
 	            data-anchor-target="#slide-page">
 	          	<section class="page-hero">
 	        	<header class="page-title">

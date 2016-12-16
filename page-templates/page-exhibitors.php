@@ -80,7 +80,7 @@ get_template_part('template-parts/title');
 				'paged' => $paged,
 				'meta_key'	=> 'date',
 				'orderby'	=> 'meta_value_num',
-				'order'		=> 'ASC'
+				'order'		=> 'DESC'
 			));
 			if ($wp_query->have_posts()) : ?>
 			<section class="events">
@@ -121,7 +121,7 @@ get_template_part('template-parts/title');
 				<div class="event-photo"><?php echo wp_get_attachment_image( $photo, $size ); ?></div>
 				
 				<div class="content">
-					<h2><?php the_title(); ?></h2>
+					<h2 class="smaller"><?php the_title(); ?></h2>
 					<div class="dates">
 						<?php 
 						if( $end_date != '' ) {

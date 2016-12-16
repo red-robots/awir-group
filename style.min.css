@@ -1545,6 +1545,7 @@ section.trials h2{font-size:22px}
 }@media screen and (min-width:1200px){section.trials h2{font-size:22px}
 }section.events .event{width:100%;background-color:#fff;padding:2%}
 section.events .event h2{font-size:35px}
+section.events .event h2.smaller{font-size:25px}
 section.events .first{float:left;margin:0 0 30px 0}
 section.events .last{float:right;margin:0 0 30px 0}
 section.events .event-left{width:45%;float:left}

@@ -7,6 +7,8 @@ get_header();
 
 get_template_part('template-parts/title');
 
+get_template_part('template-parts/subnav-resources');
+
 ?>
 <div class="wrapper">
 
@@ -25,21 +27,36 @@ get_template_part('template-parts/title');
 					</div><!-- .entry-content -->
 
 				</article><!-- #post-## -->
+			<?php endwhile; // End of the loop. ?>
 
-				<section class="pagelinks">
-					<div class="link  wow fadeInUp">
-						<a href="<?php bloginfo('url'); ?>/advocacy">Advocacy</a>
-					</div>
-					<div class="link  wow fadeInUp">
-						<a href="<?php bloginfo('url'); ?>/education">Education</a>
-					</div>
-					<div class="link  wow fadeInUp">
-						<a href="<?php bloginfo('url'); ?>/clinical-trials">Clinical Trials</a>
-					</div>
-				</section>
 
-			<?php endwhile; // End of the loop.
-			?>
+			<?php 
+
+			$args = array(
+			    'post_parent' => $post->ID,
+			    'post_type' => 'page',
+			    'orderby' => 'menu_order'
+			);
+
+			$child_query = new WP_Query( $args ); ?>
+			
+			<section class="pagelinks">
+
+			<?php if ( $child_query->have_posts() ) : ?>
+
+			 <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
+				
+					<div class="link  wow fadeInUp">
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+					</div>
+
+			<?php endwhile; ?>
+
+			</section>
+
+		<?php endif; ?>
+
+			
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
