@@ -270,6 +270,27 @@ section.page-hero {
 .small-wrap {
 	width: 60%;
 	margin: 0 auto;
+
+	video {
+		max-width: 100%;
+	}
+}
+.video-wrap {
+	width: 60%;
+	margin: 0 auto;
+	padding: 40px 0 40px ;
+
+	h3 {
+		width: 100%;
+		text-align: center;
+		font-size: 40px;
+		margin-top: 20px;
+		clear: both;
+	}
+
+	video {
+		max-width: 100%;
+	}
 }
 .board-member {
 	width: 30%;

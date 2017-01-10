@@ -186,6 +186,18 @@ get_header(); ?>
 		    </div>
 		</section>
 
+		<section class="slide">
+			<div class="video-wrap">
+			<h3>Who We Are</h3>
+				<video controls>
+				  <!-- <source src="somevideo.webm" type="video/webm"> -->
+				  <source src="<?php bloginfo('template_url'); ?>/images/who-we-are.mp4" type="video/mp4">
+				  I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9 or MP4 with H.264.
+				  <!-- You can embed a Flash player here, to play your mp4 video in older browsers -->
+				</video>
+			</div>
+		</section>
+
 		<section id="slide-5" class="skr-slide">
 		    <div class="bcg "
 		     style="background-image:url(<?php bloginfo('template_url'); ?>/images/image5.jpg);"
